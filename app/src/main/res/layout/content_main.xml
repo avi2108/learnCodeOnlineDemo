@@ -29,7 +29,7 @@
                 android:id="@+id/tvAtContentFooterForCredits"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=" - By Hitesh"
+                android:text="@string/text_for_concepts_credits"
                 android:textStyle="italic"
                 android:textColor="@color/colorPrimary"
                 android:gravity="right"

@@ -16,7 +16,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("LearnCode");
+        getSupportActionBar().setTitle(R.string.homeactivity_text);
         findViewById(R.id.layoutItemForDataStructures).setOnClickListener(this);
         findViewById(R.id.layoutItemForCategory2).setOnClickListener(this);
     }

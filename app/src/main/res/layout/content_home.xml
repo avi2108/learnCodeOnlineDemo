@@ -28,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:textSize="16sp"
+                android:textSize="@dimen/text_size_medium"
                 android:layout_margin="@dimen/dimen_5"
                 android:id="@+id/tvLabelAtCourseList"
                 android:text="Learn Basics"/>
@@ -41,8 +41,8 @@
                 android:layout_below="@id/tvLabelAtCourseList"
                 android:orientation="vertical">
                 <android.support.v7.widget.AppCompatImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="@dimen/dimen_120"
+                    android:layout_height="@dimen/dimen_120"
                     app:srcCompat="@drawable/ds"
                     android:scaleType="centerCrop"
                     android:background="@drawable/bg_for_course_image"
@@ -54,7 +54,7 @@
                     android:text="@string/concept_name_1"
                     android:paddingLeft="@dimen/dimen_5"
                     android:paddingRight="@dimen/dimen_5"
-                    android:textSize="14sp"
+                    android:textSize="@dimen/text_size_moderate"
                     android:layout_gravity="left"
                     android:textColor="@color/white"/>
             </LinearLayout>
@@ -68,8 +68,8 @@
                 android:layout_below="@id/tvLabelAtCourseList"
                 android:orientation="vertical">
                 <android.support.v7.widget.AppCompatImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="@dimen/dimen_120"
+                    android:layout_height="@dimen/dimen_120"
                     android:scaleType="centerCrop"
                     android:background="@drawable/bg_for_course_image"
 
@@ -82,7 +82,7 @@
                     android:text="@string/concept_name_2"
                     android:paddingLeft="@dimen/dimen_5"
                     android:paddingRight="@dimen/dimen_5"
-                    android:textSize="14sp"
+                    android:textSize="@dimen/text_size_moderate"
                     android:layout_gravity="left"
                     android:textColor="@color/white"/>
             </LinearLayout>

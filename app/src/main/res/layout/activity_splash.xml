@@ -24,6 +24,6 @@
         android:textColor="@color/white"
         android:visibility="gone"
 android:id="@+id/tvForAppNameAtSplash"
-        android:textSize="15sp"
+        android:textSize="@dimen/text_size_medium"
         app:fontFamily="@font/amaranth" />
 </RelativeLayout>
