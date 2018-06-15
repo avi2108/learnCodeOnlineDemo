@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+    <color name="colorPrimary">#00ACC1</color>
+
+    <color name="colorPrimaryDark">#00ACC1</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="graybg">#edeaeb</color>
+    <color name="gray">#817e7f</color>
+    <color name="darkGray">#595757</color>
+    <color name="black">#000000</color>
+
+    <color name="white">#fff</color>
+    <color name="card_bg_color">#fbfafa</color>
+    <color name="course_card_bg">#333B40</color>
+    <color name="google_play_green">#79ba40</color>
+    <color name="activity_bg_color">#99272727</color>
+
+</resources>
