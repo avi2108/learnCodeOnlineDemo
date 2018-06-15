@@ -29,18 +29,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle(getIntent().getStringExtra("conceptName"));
+        getSupportActionBar().setTitle(getIntent().getStringExtra("conceptName"));//setting the received concept/topic name to current screen title
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
 
         RecyclerView recyclerView = findViewById(R.id.recyclerViewForQuestions);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
@@ -48,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerAdapterForQuestions = new RecyclerAdapterForQuestions(this, new JSONArray());
         recyclerView.setAdapter(recyclerAdapterForQuestions);
 
-        prepareDataFromApi("https://learncodeonline.in/api/android/datastructure.json");
+        prepareDataFromApi("https://learncodeonline.in/api/android/datastructure.json");//fetching and generating list from API
 
     }
 
@@ -112,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
                 super.onPostExecute(o);
 
                 try {
+                    //setting the received json data to RecyclerView's adapter
                     JSONArray dataJsonArray = new JSONObject(((String) o).toString()).getJSONArray("questions");
                     recyclerAdapterForQuestions.setDataArray(dataJsonArray);
                     recyclerAdapterForQuestions.notifyDataSetChanged();

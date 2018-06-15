@@ -25,7 +25,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
 
        final Intent intent = new Intent(HomeActivity.this, MainActivity.class);
-        if (v.getId() == R.id.layoutItemForDataStructures) {
+        if (v.getId() == R.id.layoutItemForDataStructures) {//sending the topic data to MainActivity screen
             intent.putExtra("conceptName", getString(R.string.concept_name_1));
         } else {
             intent.putExtra("conceptName", getString(R.string.concept_name_2));
