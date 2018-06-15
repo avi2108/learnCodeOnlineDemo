@@ -10,7 +10,7 @@
     <color name="gray">#817e7f</color>
     <color name="darkGray">#595757</color>
     <color name="black">#000000</color>
-
+    <color name="black_overlay">#90000000</color>
     <color name="white">#fff</color>
     <color name="card_bg_color">#fbfafa</color>
     <color name="course_card_bg">#333B40</color>

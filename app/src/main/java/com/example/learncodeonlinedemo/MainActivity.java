@@ -1,5 +1,7 @@
 package com.example.learncodeonlinedemo;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -40,7 +42,15 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(recyclerAdapterForQuestions);
 
         prepareDataFromApi("https://learncodeonline.in/api/android/datastructure.json");//fetching and generating list from API
-
+        findViewById(R.id.layout_footer_ad).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://courses.learncodeonline.in";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+            }
+        });
     }
 
     @Override
@@ -75,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
                 super.onPreExecute();
 
                 findViewById(R.id.tvAtContentFooterForCredits).setVisibility(View.GONE);
+                findViewById(R.id.layout_footer_ad).setVisibility(View.GONE);
                 findViewById(R.id.progressBarATMain).setVisibility(View.VISIBLE);
             }
 
@@ -108,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
                     recyclerAdapterForQuestions.setDataArray(dataJsonArray);
                     recyclerAdapterForQuestions.notifyDataSetChanged();
                     findViewById(R.id.tvAtContentFooterForCredits).setVisibility(View.VISIBLE);
+                    findViewById(R.id.layout_footer_ad).setVisibility(View.VISIBLE);
                     findViewById(R.id.progressBarATMain).setVisibility(View.GONE);
                 } catch (Exception e) {
                     e.printStackTrace();

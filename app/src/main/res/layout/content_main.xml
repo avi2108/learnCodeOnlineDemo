@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/activity_bg_color"
-    android:paddingTop="@dimen/dimen_10"
+    android:paddingTop="@dimen/dimen_5"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.learncodeonlinedemo.MainActivity"
     tools:showIn="@layout/activity_main">
@@ -21,7 +21,7 @@
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recyclerViewForQuestions"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content">
 
             </android.support.v7.widget.RecyclerView>
 
@@ -29,18 +29,51 @@
                 android:id="@+id/tvAtContentFooterForCredits"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/text_for_concepts_credits"
-                android:textStyle="italic"
-                android:textColor="@color/colorPrimary"
-                android:gravity="right"
                 android:layout_below="@id/recyclerViewForQuestions"
-                 android:background="#272727"
-                android:padding="@dimen/fab_margin" />
+                android:background="#272727"
+                android:gravity="right"
+                android:padding="@dimen/dimen_10"
+                android:layout_marginBottom="@dimen/dimen_3"
+                 android:text="@string/text_for_concepts_credits"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="italic" />
+
+            <RelativeLayout
+                android:id="@+id/layout_footer_ad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvAtContentFooterForCredits"
+                android:background="@color/black_overlay"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/dimen_5">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tvForReachUsAtHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.5"
+                    android:text="@string/text_ad_info"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_tiny" />
+
+                <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@+id/tvForReachUsAtHome"
+                    android:alpha="0.7"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/learncode_banner" />
+            </RelativeLayout>
+
         </RelativeLayout>
     </android.support.v4.widget.NestedScrollView>
+
     <ProgressBar
+        android:id="@+id/progressBarATMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/progressBarATMain"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true" />
 </RelativeLayout>

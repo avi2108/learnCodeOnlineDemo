@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -23,16 +24,8 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         final ImageView imageView = findViewById(R.id.imgAtSplash);
 
-        //---applying scale animation infinitely
-        ObjectAnimator scaleX = ObjectAnimator.ofFloat(imageView, "scaleX", 1.2f, 1.5f);
-        ObjectAnimator scaleY = ObjectAnimator.ofFloat(imageView, "scaleY", 1.2f, 1.5f);
-
-        AnimatorSet scaleAnim = new AnimatorSet();
-        scaleAnim.setDuration(900);
-        scaleAnim.play(scaleX).with(scaleY);
-        scaleAnim.start();
-        scaleX.setRepeatCount(ObjectAnimator.INFINITE);
-        scaleX.setRepeatMode(ObjectAnimator.REVERSE);
+        applyIndefiniteZoomInOutAnim(findViewById(R.id.imgAtSplash));
+        applyIndefiniteZoomInOutAnim(findViewById(R.id.imgHeartATSplash));
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -47,5 +40,23 @@ public class SplashActivity extends AppCompatActivity {
                 });
             }
         }, 4000);
+    }
+
+    /**
+     * Applying a zoomin zoom out anim effect for view passed in as Argument
+     *
+     * @param view
+     */
+    void applyIndefiniteZoomInOutAnim(View view) {
+        //---applying scale animation infinitely
+        ObjectAnimator scaleX = ObjectAnimator.ofFloat(view, "scaleX", 0.8f, 1.2f);
+        ObjectAnimator scaleY = ObjectAnimator.ofFloat(view, "scaleY", 0.8f, 1.2f);
+
+        AnimatorSet scaleAnim = new AnimatorSet();
+        scaleAnim.setDuration(900);
+        scaleAnim.play(scaleX).with(scaleY);
+        scaleAnim.start();
+        scaleX.setRepeatCount(ObjectAnimator.INFINITE);
+        scaleX.setRepeatMode(ObjectAnimator.REVERSE);
     }
 }
